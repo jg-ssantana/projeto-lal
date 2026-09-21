@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ETE Luiz Alves Lacerda — Processo Seletivo</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <img src="imgs/logoetelal.png" alt="Logo da ETE Luiz Alves Lacerda" style="width: 180px" />
+        <div>ETE Luiz Alves Lacerda</div>
+      </div>
+
+      <nav class="menu" aria-label="Menu principal">
+        <a href="index.html">Sobre</a>
+        <a href="cursos.html">Cursos</a>
+        <a href="processo-seletivo.html">Processo Seletivo</a>
+        <a href="contato.html">Localização & Contato</a>
+        <a href="inscricao.html">Inscrição</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-card">
+        <h1>Processo Seletivo</h1>
+        <p>Entenda como funciona o ingresso: prova objetiva e reserva de vagas (cotas).</p>
+      </div>
+    </section>
+
+    <section class="grid-2">
+      <article class="card">
+        <h2>Ingresso: processo seletivo</h2>
+        <p>O ingresso não acontece por matrícula direta, mas por processo seletivo público e gratuito.</p>
+
+        <div class="divider"></div>
+
+        <h2 style="margin-top:0;color:var(--pe-amarelo);font-size:1.05rem;">A prova</h2>
+        <p>Exame objetivo focado em conhecimentos de <b>Língua Portuguesa</b> e <b>Matemática</b>.</p>
+
+        <div class="divider"></div>
+
+        <h2 style="margin-top:0;color:var(--pe-amarelo);font-size:1.05rem;">Cotas (reserva de vagas)</h2>
+        <p>
+          Segundo a legislação estadual, <b>80%</b> das vagas são destinadas prioritariamente a alunos que cursaram integralmente
+          os anos finais do Ensino Fundamental em escolas públicas.
+        </p>
+
+        <ul>
+          <li>Estudantes de baixa renda.</li>
+          <li>Pessoas com deficiência (PCD).</li>
+          <li>Critérios de vulnerabilidade socioeconômica.</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h2>Próximos passos</h2>
+        <p>
+          Para participar, consulte os detalhes dos <a href="cursos.html">cursos</a> e siga para a página de <b><a href="inscricao.html">Inscrição</a></b>.
+        </p>
+
+        <div class="divider"></div>
+
+        <p class="small-note" style="margin-bottom:0;">
+          Dica: veja também a página de <b><a href="cursos.html">Cursos</a></b> para conhecer as áreas técnicas.
+        </p>
+
+      </article>
+    </section>
+  </main>
+
+  <footer>© 2026 — Site da ETE Luiz Alves Lacerda (exemplo)</footer>
+
+  <script>
+    (function () {
+      const path = window.location.pathname.split("/").pop() || "processo-seletivo.html";
+      document.querySelectorAll(".menu a").forEach(a => {
+        const href = a.getAttribute("href");
+        if (!href) return;
+        const normalized = href.split("/").pop();
+        if (normalized === path) a.classList.add("active");
+      });
+    })();
+  </script>
+</body>
+</html>

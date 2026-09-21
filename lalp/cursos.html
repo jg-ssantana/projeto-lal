@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ETE Luiz Alves Lacerda — Cursos</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <img src="imgs/logoetelal.png" alt="Logo da ETE Luiz Alves Lacerda" style="width: 180px" />
+        <div>ETE Luiz Alves Lacerda</div>
+      </div>
+
+      <nav class="menu" aria-label="Menu principal">
+        <a href="index.html">Sobre</a>
+        <a href="cursos.html">Cursos</a>
+        <a href="processo-seletivo.html">Processo Seletivo</a>
+        <a href="contato.html">Localização & Contato</a>
+        <a href="inscricao.html">Inscrição</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-card">
+        <h1>Cursos Técnicos</h1>
+        <p>Conheça os cursos técnicos oferecidos e as áreas de atuação após a formação.</p>
+      </div>
+    </section>
+
+    <section class="grid-2">
+      <article class="card">
+        <h2>Curso Técnico em Desenvolvimento de Sistemas</h2>
+        <p>
+          O Curso Técnico em Desenvolvimento de Sistemas prepara o estudante para atuar na criação, desenvolvimento e manutenção de
+          sites, aplicativos, sistemas e programas de computador.
+          Durante o curso, o aluno aprende conceitos de programação, banco de dados, desenvolvimento web e outras tecnologias utilizadas
+          no mercado de trabalho.
+        </p>
+
+        <div class="divider"></div>
+
+        <h2 style="margin-top:0;">Principais conteúdos</h2>
+        <ul>
+          <li>Lógica de programação: desenvolvimento do raciocínio necessário para criar programas.</li>
+          <li>Linguagens de programação: utilização de linguagens para desenvolver sistemas e aplicações.</li>
+          <li>Desenvolvimento Web: criação de sites e sistemas para a internet.</li>
+          <li>Banco de dados: organização, armazenamento e consulta de informações.</li>
+          <li>Análise de sistemas: identificação de necessidades e planejamento de soluções tecnológicas.</li>
+          <li>Desenvolvimento de aplicativos: criação de aplicações para diferentes dispositivos.</li>
+          <li>Testes e manutenção: identificação de erros e melhorias nos sistemas desenvolvidos.</li>
+        </ul>
+
+        <div class="divider"></div>
+
+        <h2 style="margin-top:0;">Mercado de trabalho</h2>
+        <p>
+          Após a formação, o técnico pode trabalhar em empresas de tecnologia, instituições públicas, startups, empresas de comércio e
+          outros setores que utilizem sistemas informatizados.
+          Algumas possibilidades profissionais incluem desenvolvedor de sistemas, desenvolvedor web, programador e auxiliar de banco de dados.
+        </p>
+        <p style="margin-bottom:0;">
+          O curso também pode servir como base para quem deseja continuar os estudos em áreas como Ciência da Computação, Sistemas de Informação,
+          Engenharia de Software e Análise e Desenvolvimento de Sistemas.
+        </p>
+      </article>
+
+      <article class="card">
+        <h2>Curso Técnico em Logística</h2>
+        <p>
+          O Curso Técnico em Logística prepara o estudante para atuar no planejamento, organização e controle do fluxo de produtos, materiais
+          e informações dentro de empresas.
+          O objetivo é fazer com que os produtos sejam armazenados, transportados e entregues de maneira eficiente, reduzindo custos e evitando desperdícios.
+        </p>
+
+        <div class="divider"></div>
+
+        <h2 style="margin-top:0;">Principais conteúdos</h2>
+        <p>Durante o curso, o estudante pode aprender sobre:</p>
+        <ul>
+          <li>Gestão de estoques: controle da entrada, saída e quantidade de produtos armazenados.</li>
+          <li>Armazenagem: organização e conservação de materiais em depósitos e centros de distribuição.</li>
+          <li>Transportes: planejamento e acompanhamento do deslocamento de mercadorias.</li>
+          <li>Compras e suprimentos: aquisição e controle de materiais necessários para as atividades da empresa.</li>
+          <li>Distribuição: organização da entrega de produtos aos clientes.</li>
+          <li>Gestão de custos: controle das despesas relacionadas às operações logísticas.</li>
+          <li>Planejamento logístico: elaboração de estratégias para melhorar os processos e aumentar a eficiência.</li>
+        </ul>
+
+        <div class="divider"></div>
+
+        <h2 style="margin-top:0;">Mercado de trabalho</h2>
+        <p>
+          O técnico em Logística pode trabalhar em indústrias, empresas de comércio, transportadoras, centros de distribuição,
+          supermercados, portos, aeroportos e empresas de serviços.
+        </p>
+        <p>
+          Entre as atividades profissionais estão o controle de estoques, organização de armazéns, acompanhamento de transportes,
+          planejamento de entregas e auxílio na gestão de compras e distribuição.
+        </p>
+        <p style="margin-bottom:0;">
+          O curso também pode servir como preparação para continuar os estudos em áreas como Logística, Administração, Gestão da Cadeia de Suprimentos e Comércio Exterior.
+        </p>
+      </article>
+    </section>
+  </main>
+
+  <footer>© 2026 — Site da ETE Luiz Alves Lacerda</footer>
+
+  <script>
+    (function () {
+      const path = window.location.pathname.split("/").pop() || "cursos.html";
+      document.querySelectorAll(".menu a").forEach(a => {
+        const href = a.getAttribute("href");
+        if (!href) return;
+        const normalized = href.split("/").pop();
+        if (normalized === path) a.classList.add("active");
+      });
+    })();
+  </script>
+</body>
+</html>

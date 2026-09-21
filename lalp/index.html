@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ETE Luiz Alves Lacerda — Sobre</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <img src="imgs/logoetelal.png" alt="Logo da ETE Luiz Alves Lacerda" style="width: 180px" />
+        <div>ETE Luiz Alves Lacerda</div>
+      </div>
+
+      <nav class="menu" aria-label="Menu principal">
+        <a href="index.html">Sobre</a>
+        <a href="cursos.html">Cursos</a>
+        <a href="processo-seletivo.html">Processo Seletivo</a>
+        <a href="contato.html">Localização & Contato</a>
+        <a href="inscricao.html">Inscrição</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-card">
+        <h1>Sobre a Escola</h1>
+        <p>
+          A Escola Técnica Estadual (ETE) Luiz Alves Lacerda é uma instituição pública de ensino médio
+          e profissionalizante localizada no município de Cabo de Santo Agostinho, Pernambuco.
+        </p>
+      </div>
+    </section>
+
+    <section class="grid-2">
+      <article class="card">
+        <h2>Estrutura e funcionamento</h2>
+        <p>Inaugurada em 2018, a escola conta com ampla infraestrutura para atender aos estudantes em jornada integral.</p>
+        <ul>
+          <li>12 salas de aula e auditório/recreio coberto.</li>
+          <li>Laboratórios de informática, ciências, física e matemática.</li>
+          <li>Quadra poliesportiva coberta com vestiários.</li>
+          <li>Biblioteca e refeitório.</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h2>Oferta educacional</h2>
+        <p>
+          A unidade integra o ensino médio regular a cursos técnicos profissionalizantes (como Logística e Desenvolvimento de Sistemas),
+          preparando os jovens para o mercado de trabalho regional e para o ingresso no ensino superior.
+        </p>
+      </article>
+    </section>
+
+    <section class="grid-2" style="padding-top:0;">
+      <article class="card">
+        <h2>Destaque no cenário local</h2>
+        <p>
+          A escola tem forte impacto no ecossistema educacional do município. Em articulação com programas preparatórios da Prefeitura do Cabo de Santo Agostinho
+          (como o Aprova Cabo), estudantes da rede municipal costumam ocupar mais da metade das vagas disponíveis na ETE Luiz Alves Lacerda e na ETE Epitácio Pessoa.
+        </p>
+      </article>
+
+      <article class="card">
+        <h2>Identidade da escola</h2>
+        <p>
+          Ensino médio e profissionalização com foco em formação prática e oportunidades para diferentes perfis de estudantes,
+          por meio de modalidades geridas pela Secretaria de Educação e Esportes de Pernambuco (SEE).
+        </p>
+        <p style="margin-bottom:0;">
+          Navegue no menu para ver os <b><a href="cursos.html">cursos</a></b> disponiveis e <b><a href="processo-seletivo.html">como funciona o processo seletivo</a></b>, além de <b><a href="contato.html">endereço e contato</a></b>.
+        </p>
+      </article>
+    </section>
+  </main>
+
+  <footer>© 2026 — Site da ETE Luiz Alves Lacerda</footer>
+
+  <script>
+    (function () {
+      const path = window.location.pathname.split("/").pop() || "index.html";
+      document.querySelectorAll(".menu a").forEach(a => {
+        const href = a.getAttribute("href");
+        if (!href) return;
+        const normalized = href.split("/").pop();
+        if (normalized === path) a.classList.add("active");
+      });
+    })();
+  </script>
+</body>
+</html>

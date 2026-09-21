@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ETE Luiz Alves Lacerda — Inscrição</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <img src="imgs/logoetelal.png" alt="Logo da ETE Luiz Alves Lacerda" style="width: 180px" />
+        <div>ETE Luiz Alves Lacerda</div>
+      </div>
+
+      <nav class="menu" aria-label="Menu principal">
+        <a href="index.html">Sobre</a>
+        <a href="cursos.html">Cursos</a>
+        <a href="processo-seletivo.html">Processo Seletivo</a>
+        <a href="contato.html">Localização & Contato</a>
+        <a href="inscricao.html">Inscrição</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-card">
+        <h1>Inscrição</h1>
+        <p>
+          Preencha os dados abaixo para iniciar seu interesse na seleção da ETE.
+          (Exemplo de formulário; você pode conectar depois ao sistema oficial da escola/SEE.)
+        </p>
+      </div>
+    </section>
+
+    <section class="grid-2" style="padding-bottom:34px;">
+      <article class="card">
+        <h2>Formulário</h2>
+
+        <form
+          onsubmit="event.preventDefault(); alert('Formulário enviado (exemplo).');"
+        >
+          <label class="small-note" style="display:block; margin:10px 0 6px;">Nome completo</label>
+          <input type="text" required style="width:100%; padding:12px 12px; border-radius:12px; border:1px solid rgba(255,255,255,0.16); background:rgba(255,255,255,0.06); color:var(--text); outline:none;"/>
+
+          <label class="small-note" style="display:block; margin:10px 0 6px;">CPF (opcional)</label>
+          <input type="text" style="width:100%; padding:12px 12px; border-radius:12px; border:1px solid rgba(255,255,255,0.16); background:rgba(255,255,255,0.06); color:var(--text); outline:none;"/>
+
+          <label class="small-note" style="display:block; margin:10px 0 6px;">E-mail</label>
+          <input type="email" required style="width:100%; padding:12px 12px; border-radius:12px; border:1px solid rgba(255,255,255,0.16); background:rgba(255,255,255,0.06); color:var(--text); outline:none;"/>
+
+          <label class="small-note" style="display:block; margin:10px 0 6px;">Telefone/WhatsApp</label>
+          <input type="tel" required style="width:100%; padding:12px 12px; border-radius:12px; border:1px solid rgba(255,255,255,0.16); background:rgba(255,255,255,0.06); color:var(--text); outline:none;"/>
+
+          <label class="small-note" style="display:block; margin:10px 0 6px;">Modalidade de interesse</label>
+          <select required style="width:100%; padding:12px 12px; border-radius:12px; border:1px solid rgba(204, 0, 0, 0.16); background:rgba(255,255,255,0.06); color:var(--text); outline:none;">
+            <option value="" selected disabled>Selecione</option>
+            <option>Médio Integrado</option>
+            <option>Subsequente</option>
+            <option>Ensino a Distância (EaD) / Semipresencial</option>
+          </select>
+        
+          <label class="small-note" style="display:block; margin:10px 0 6px;">Curso de interesse</label>
+            <select required style="width:100%; padding:12px 12px; border-radius:12px; border:1px solid rgba(204, 0, 0, 0.16); background:rgba(255,255,255,0.06); color:var(--text); outline:none;">
+              <option value="" selected disabled>Selecione</option>
+              <option>Desenvolvimento de Sistemas</option>
+              <option>Logística</option>
+            </select>
+
+          <div class="divider"></div>
+
+          <button
+            type="submit"
+            style="width:100%; padding:12px 12px; border-radius:12px; border:1px solid rgba(247,201,72,0.55); background:rgba(247,201,72,0.16); color:var(--pe-branco); font-weight:800; cursor:pointer;"
+          >
+            Enviar inscrição (exemplo)
+          </button>
+        </form>
+      </article>
+
+      <article class="card">
+        <h2>Informações do ingresso</h2>
+        <p>
+          A ETE não faz matrícula direta: o ingresso ocorre por processo seletivo público e gratuito.
+        </p>
+
+        <div class="divider"></div>
+
+        <h2 style="margin-top:0; color:var(--pe-amarelo); font-size:1.05rem;">A prova</h2>
+        <p class="small-note" style="margin-bottom:0;">
+          Exame objetivo focado em <b>Língua Portuguesa</b> e <b>Matemática</b>.
+        </p>
+
+        <div class="divider"></div>
+
+        <h2 style="margin-top:0; color:var(--pe-amarelo); font-size:1.05rem;">Cotas (reserva de vagas)</h2>
+        <p class="small-note" style="margin-bottom:0;">
+          Segundo legislação estadual, <b>80%</b> das vagas são destinadas prioritariamente a alunos que cursaram integralmente os anos finais do Ensino Fundamental em escolas públicas.
+        </p>
+
+        <div class="divider"></div>
+
+        <p class="small-note" style="margin-bottom:0;">
+          Para mais detalhes, consulte a página <b><a href="processo-seletivo.html">Processo Seletivo</a></b>.
+        </p>
+      </article>
+    </section>
+  </main>
+
+  <footer>© 2026 — Site da ETE Luiz Alves Lacerda</footer>
+
+  <script>
+    (function () {
+      const path = window.location.pathname.split("/").pop() || "inscricao.html";
+      document.querySelectorAll(".menu a").forEach(a => {
+        const href = a.getAttribute("href");
+        if (!href) return;
+        const normalized = href.split("/").pop();
+        if (normalized === path) a.classList.add("active");
+      });
+    })();
+  </script>
+</body>
+</html>
